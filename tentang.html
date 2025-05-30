@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tentang Islam di Indonesia</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    .tab {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      overflow: hidden;
+      border: 2px solid #007bff;
+      border-radius: 10px;
+      background-color: #f1f1f1;
+      margin-top: 20px;
+      padding: 5px;
+    }
+
+    .tab button {
+      background-color: #007bff;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 12px 20px;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      transition: background-color 0.3s, transform 0.2s;
+      border-radius: 10px 10px 0 0;
+      margin-right: 10px;
+      flex: 1 1 33%;
+      text-align: center;
+    }
+
+    .tab button:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+
+    .tab button.active {
+      background-color: #0056b3;
+      color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transform: scale(1.05);
+    }
+
+    .tabcontent {
+      display: none;
+      padding: 20px;
+      background-color: #fff;
+      border: 2px solid #007bff;
+      border-radius: 0 0 10px 10px;
+      animation: fadeIn 0.5s ease-in-out;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .tab {
+        flex-direction: column;
+      }
+
+      .tab button {
+        width: 100%;
+        margin-right: 0;
+        border-radius: 5px;
+        margin-bottom: 5px;
+      }
+
+      .tabcontent {
+        margin-top: 10px;
+      }
+    }
+    
+    body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f4f8;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.credits-container {
+  max-width: 600px;
+  margin: 50px auto;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #d4af37;
+  margin-bottom: 30px;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.slides {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.slide {
+  display: none;
+  padding: 20px;
+}
+
+.slide img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #d4af37;
+  margin-bottom: 15px;
+}
+
+.slide h3 {
+  margin: 10px 0 5px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.slide p {
+  margin: 0;
+  font-size: 14px;
+  color: #d4af37;
+}
+
+/* Tampilkan hanya slide yang aktif */
+#slide1:checked ~ .slides #s1,
+#slide2:checked ~ .slides #s2,
+#slide3:checked ~ .slides #s3,
+#slide4:checked ~ .slides #s4,
+#slide5:checked ~ .slides #s5 {
+  display: block;
+}
+
+/* Navigasi (bulatan di bawah) */
+.navigation {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.navigation label {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#slide1:checked ~ .navigation label[for="slide1"],
+#slide2:checked ~ .navigation label[for="slide2"],
+#slide3:checked ~ .navigation label[for="slide3"],
+#slide4:checked ~ .navigation label[for="slide4"],
+#slide5:checked ~ .navigation label[for="slide5"] {
+  background-color: #d4af37;
+}
+
+     /* Body dengan tema Old Money */
+  body {
+            background-color: #5a4d41; /* Warna krem yang lembut dan klasik */
+            font-family: 'Georgia', serif;
+            color: #4a4a4a; /* Coklat gelap untuk teks */
+        }
+
+        header {
+            background-color: #5a4d41; /* Coklat tua */
+            color: #ffffff; /* Emas lembut */
+            padding: 60px 0;
+            text-align: center;
+            border-bottom: 3px solid #d4af37; /* Garis emas */
+        }
+
+        header h1 {
+            font-size: 4em;
+            margin: 0;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #5a4d41; /* Coklat tua */
+            border-radius: 0;
+        }
+
+        .navbar-nav .nav-link {
+            color: #d4af37 !important; /* Emas lembut */
+            font-size: 1.1em;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #fff !important;
+        }
+
+        .content {
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+
+        .content h2 {
+            font-size: 2.5em;
+            color: #5a4d41; /* Coklat tua */
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .content p {
+            color: #4a4a4a; /* Coklat gelap */
+            line-height: 1.8;
+            font-size: 1.1em;
+            text-align: justify;
+        }
+
+        .footer {
+            background-color: #5a4d41; /* Coklat tua */
+            color: #d0d0d0; /* Emas lembut */
+            padding: 20px 0;
+            text-align: center;
+            border-top: 3px solid #d4af37; /* Garis emas */
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .card {
+            border: 1px solid #d4af37; /* Emas lembut */
+            border-radius: 10px;
+            background-color: #5a4d41;
+            margin-bottom: 20px;
+        }
+
+        .card-body {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .card-body h5 {
+            font-size: 1.6em;
+            color: #5a4d41;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .card-body p {
+            color: #4a4a4a;
+            font-size: 1.1em;
+            line-height: 1.7;
+        }
+
+        .btn-custom {
+            background-color: #4e4937;
+            color: #fff;
+            padding: 12px 30px;
+            font-size: 1.2em;
+            border-radius: 50px;
+            font-weight: bold;
+            border: none;
+        }
+
+        .btn-custom:hover {
+            background-color: #fff;
+            color: #5a4d41;
+            border: 1px solid #3e3e3e;
+        }
+
+        .row {
+            margin-bottom: 30px;
+        }
+
+        /* Responsif pada perangkat kecil */
+        @media (max-width: 768px) {
+            .navbar-nav .nav-link {
+                font-size: 1em;
+            }
+
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            .content h2 {
+                font-size: 2em;
+            }
+
+            .content p {
+                font-size: 1em;
+            }
+        }
+
+        /* Styling untuk carousel */
+        .carousel-item img {
+            height: 500px;
+            object-fit: cover;
+        }
+  img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+
+
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Kerajaan Demak</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+         
+          <li class="nav-item"><a class="nav-link" href="kerajaan.html">Kerajaan</a></li>
+          <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link active" href="tentang.html">Tentang</a></li>
+         
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="credits-container">
+    <h1>Credits Kelompok</h1>
+
+    <!-- Slider -->
+    <div class="slider">
+      <!-- Radio buttons -->
+      <input type="radio" name="slide" id="slide1" checked>
+      <input type="radio" name="slide" id="slide2">
+      <input type="radio" name="slide" id="slide3">
+      <input type="radio" name="slide" id="slide4">
+      <input type="radio" name="slide" id="slide5">
+
+      <div class="slides">
+        <!-- Slide 1 -->
+        <div class="slide" id="s1">
+          <img src="c:\Users\Lenovo\Downloads\Tasha X-4\WhatsApp Image 2025-05-28 at 00.23.35_2e02f76e.jpg" alt="Budi" />
+          <h3>Tasha</h3>
+          <p>Programmer web berikut</p>
+        </div>
+        <!-- Slide 2 -->
+        <div class="slide" id="s2">
+          <img src="c:\Users\Lenovo\Downloads\Tasha X-4\WhatsApp Image 2025-05-29 at 23.14.15_80f90ec5.jpg" alt="Siti" />
+          <h3>Sherryl</h3>
+          <p>Pencari Info</p>
+        </div>
+        <!-- Slide 3 -->
+        <div class="slide" id="s3">
+          <img src="c:\Users\Lenovo\Downloads\Tasha X-4\WhatsApp Image 2025-05-29 at 23.16.10_95f399e4.jpg" alt="Dedi" />
+          <h3>Aldrick</h3>
+          <p>Pencari Info</p>
+        </div>
+        <!-- Slide 4 -->
+        <div class="slide" id="s4">
+          <img src="c:\Users\Lenovo\Downloads\Tasha X-4\WhatsApp Image 2025-05-29 at 23.11.57_8bd0869e.jpg" alt="Lala" />
+          <h3>Marvell Lee</h3>
+          <p>Pencari Info</p>
+        </div>
+        <!-- Slide 5 -->
+        <div class="slide" id="s5">
+          <img src="c:\Users\Lenovo\Downloads\Tasha X-4\WhatsApp Image 2025-05-29 at 23.14.02_e31607ee.jpg" alt="Rian" />
+          <h3>Kanda</h3>
+          <p>Pencari Info</p>
+        </div>
+      </div>
+
+      <!-- Navigation (dots) -->
+      <div class="navigation">
+        <label for="slide1"></label>
+        <label for="slide2"></label>
+        <label for="slide3"></label>
+        <label for="slide4"></label>
+        <label for="slide5"></label>
+      </div>
+    </div>
+  </div>
+
+
+
+  </div>
+
+</body>
+</html>
